@@ -1,26 +1,27 @@
 #!/usr/bin/python3
-"""Defines the HBNB console."""
+"""Command interpreter for the AirBnB project."""
+
 import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """Defines the HolbertonBnB command interpreter."""
+    """Command interpreter for the AirBnB project."""
 
-    prompt = "(hbnb) "
+    prompt = '(hbnb) '
 
     def do_quit(self, arg):
-        """Quit command to exit the program."""
+        """Quit command to exit the program"""
         return True
 
     def do_EOF(self, arg):
-        """EOF signal to exit the program."""
-        print("")
+        """EOF command to exit the program"""
+        print()
         return True
 
     def emptyline(self):
-        """Do nothing upon receiving an empty line."""
+        """Do nothing when an empty line is entered."""
         pass
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()
